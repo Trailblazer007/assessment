@@ -10,6 +10,11 @@ import { InputNode } from "./nodes/inputNode";
 import { LLMNode } from "./nodes/llmNode";
 import { OutputNode } from "./nodes/outputNode";
 import { TextNode } from "./nodes/textNode";
+import { APINode } from "./nodes/apiNode";
+import { EmailNode } from "./nodes/emailNode";
+import { FilterNode } from "./nodes/filterNode";
+import { MathNode } from "./nodes/mathNode";
+import { DateNode } from "./nodes/dateNode";
 
 import "reactflow/dist/style.css";
 
@@ -20,6 +25,11 @@ const nodeTypes = {
   llm: LLMNode,
   customOutput: OutputNode,
   text: TextNode,
+  api: APINode,
+  email: EmailNode,
+  filter: FilterNode,
+  math: MathNode,
+  date: DateNode,
 };
 
 const selector = (state) => ({
