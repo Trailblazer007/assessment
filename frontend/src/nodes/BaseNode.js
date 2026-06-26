@@ -26,7 +26,13 @@ export const BaseNode = ({
           type={handle.type}
           position={handle.position}
           id={handle.id}
-          style={handle.style}
+          style={{
+            width: 14,
+            height: 14,
+            border: "2px solid #fff",
+            background: "#2563eb",
+            ...handle.style,
+          }}
         />
       ))}
 

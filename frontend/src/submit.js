@@ -22,11 +22,11 @@ export const SubmitButton = () => {
       const result = await response.json();
 
       alert(
-        `Pipeline Analysis
+        `Pipeline Analysis Complete!
 
-Nodes: ${result.num_nodes}
-Edges: ${result.num_edges}
-Is DAG: ${result.is_dag ? "Yes" : "No"}`,
+        Nodes: ${result.num_nodes}
+        Edges: ${result.num_edges}
+        Valid DAG: ${result.is_dag ? "Yes ✅" : "No ❌"}`,
       );
     } catch (error) {
       console.error(error);
@@ -44,7 +44,21 @@ Is DAG: ${result.is_dag ? "Yes" : "No"}`,
         marginTop: "20px",
       }}
     >
-      <button onClick={handleSubmit}>Submit</button>
+      <button
+        onClick={handleSubmit}
+        style={{
+          background: "#2563eb",
+          color: "white",
+          border: "none",
+          padding: "12px 28px",
+          borderRadius: "10px",
+          fontSize: "16px",
+          fontWeight: 600,
+          cursor: "pointer",
+        }}
+      >
+        Analyze Pipeline
+      </button>
     </div>
   );
 };
